@@ -124,3 +124,5 @@ const mudarTema = () => {
 
 
 mudarTemaBotao.addEventListener('click', mudarTema)
+
+chrome_options.add_argument('--log-level=1')
