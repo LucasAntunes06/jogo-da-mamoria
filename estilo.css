@@ -23,32 +23,20 @@ h1 {
 button {
   width: 2rem;
   height: 2rem;
-  background: rgb(25, 25, 25);
   border: solid 2px rgb(25, 25, 25);
   color: black;
-  /* border-radius: 0.5rem; */
-  /* padding: 1rem; */
-  /* margin-inline: 1rem; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
   background: white;
   font-family: monospace;
   font-weight: bolder;
   font-size: large;
+  transition: background 0.5s;
 }
 
 button:hover {
   background: rgb(121, 168, 255);
   cursor: pointer;
+  transition: background 0.5s;
 }
-
-/* #tabuleiro {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} */
 
 #jogadores {
   margin-bottom: 1.4rem;
@@ -71,6 +59,7 @@ button:hover {
 button:disabled {
   background: rgb(69, 134, 255);
   border-color: rgb(69, 134, 255);
+  transition: background 0.5s;
   color: white;
 }
 
@@ -84,6 +73,42 @@ button:disabled {
   width: 400px;
   height: 400px;
   flex-wrap: wrap;
-  box-shadow: 6px 6px 10px #555;
+  box-shadow: 7px 1px 25px -5px #e0f2fe;
 }
 
+#tabuleiro.dark{
+  box-shadow: 7px 1px 25px -5px rgb(0 0 0);
+}
+
+.dark{
+  background: #171717;
+  color: #fafafa;
+}
+
+.dark>button{
+  background: #171717;
+  border-color: #262626;
+  color: #fafafa;
+}
+
+.dark>button:hover{
+  background: #1e40af;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+.dark>button:disabled{
+  background: #172554;
+  border-color: #172554;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+
+#tema{
+  border: none;
+  background: none;
+}
+
+#tema:hover{
+  color: gray
+}
